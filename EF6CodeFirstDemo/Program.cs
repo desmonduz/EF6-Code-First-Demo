@@ -6,6 +6,8 @@ namespace EF6CodeFirstDemo
     {
         private static void Main(string[] args)
         {
+            AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db"));
+
             using (var ctx = new SchoolContext())
             {
                 var student = new Student() { StudentName = "Bill" };

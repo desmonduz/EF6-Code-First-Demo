@@ -10,6 +10,7 @@ namespace EF6CodeFirstDemo
         public DateTime? DateOfBirth { get; set; }
         public decimal Height { get; set; }
         public float Weight { get; set; }
+        public string HairColor { get; set; }
         public byte[] RowVersion { get; set; }
 
         //fully defined relationship

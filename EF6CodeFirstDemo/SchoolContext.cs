@@ -4,7 +4,7 @@ namespace EF6CodeFirstDemo
 {
     public class SchoolContext : DbContext
     {
-        public SchoolContext() : base("name=DefaultConnection")
+        public SchoolContext() : base()
         {
             Database.SetInitializer<SchoolContext>(new SchoolDBInitializer());
         }

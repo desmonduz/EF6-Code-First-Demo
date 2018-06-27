@@ -66,6 +66,14 @@
   <ItemGroup>
     <Compile Include="Course.cs" />
     <Compile Include="Grade.cs" />
+    <Compile Include="Migrations\201806271411308_initial.cs" />
+    <Compile Include="Migrations\201806271411308_initial.Designer.cs">
+      <DependentUpon>201806271411308_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806271452194_addedhaircolor.cs" />
+    <Compile Include="Migrations\201806271452194_addedhaircolor.Designer.cs">
+      <DependentUpon>201806271452194_addedhaircolor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,7 +85,9 @@
     <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -92,11 +102,13 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="db\db_readme.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="Migrations\201806271411308_initial.resx">
+      <DependentUpon>201806271411308_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806271452194_addedhaircolor.resx">
+      <DependentUpon>201806271452194_addedhaircolor.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

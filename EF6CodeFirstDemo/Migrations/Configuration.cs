@@ -1,3 +1,6 @@
+//this file is created automatically by running following command in PM:
+//enable-migrations
+
 namespace EF6CodeFirstDemo.Migrations
 {
     using System;
